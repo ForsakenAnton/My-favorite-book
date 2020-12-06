@@ -22,10 +22,10 @@ function GetInfoOfFavoriteBook() {
       <p><em>{book.authorName}</em></p>
       <p>{book.genre}</p>
       <p><b>Review:</b></p>
-      <p><a href={book.review[0]}>first</a></p>
-  {/* for (const item of {book.review}) {
-        <p><a href={item}></a></p>
-      }  */}
+      {/* <p><a href={book.review[0]}>first</a></p> */}
+      {book.review.map( (rev) =>(
+        <p><a href={rev}>{rev}</a></p>
+      ))}
       
   </div>
   );
